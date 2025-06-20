@@ -53,3 +53,7 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 /.vs
+
+# Ignore all web.config files in all folders
+**/Web.config
+

@@ -230,6 +230,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -238,6 +239,7 @@
     <Compile Include="Models\ApiResponse.cs" />
     <Compile Include="Models\CaseRequestModel.cs" />
     <Compile Include="Models\ContactDto.cs" />
+    <Compile Include="Models\CustomerFeedbackModel.cs" />
     <Compile Include="Models\PlainTextResult.cs" />
     <Compile Include="Models\TicketSystemApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +290,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\api-crm-esnad - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\api-crm-esnad - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\dev-api - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\dev-api - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -315,6 +319,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Case\" />
     <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Customer\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\bootstrap.min.js.map" />
