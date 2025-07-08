@@ -10,5 +10,6 @@ namespace TicketSystemApi.Models
         public string CaseId { get; set; }
         public int Rating { get; set; }
         public string Comment { get; set; }
+        public int? TimeAppropriate { get; set; }
     }
 }

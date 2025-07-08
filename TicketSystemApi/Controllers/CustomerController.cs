@@ -153,10 +153,18 @@ namespace TicketSystemApi.Controllers
                 }
 
                 // ✅ Create new feedback
+                if (model.TimeAppropriate != 1 && model.TimeAppropriate != 2)
+                    return Content(HttpStatusCode.BadRequest,
+                        ApiResponse<object>.Error("Please answer whether the time taken was appropriate."));
+
+                var commentValue = string.IsNullOrWhiteSpace(model.Comment) ? "No comments added by customer" : model.Comment.Trim();
+
                 var feedback = new Entity("new_customersatisfactionscore");
                 feedback["new_customersatisfactionrating"] = new OptionSetValue(model.Rating);
-                feedback["new_comment"] = model.Comment ?? string.Empty;
+                feedback["new_comment"] = commentValue;
+                feedback["new_customersatisfactionscore"] = commentValue;  // ⬅️ Additional field to store same comment
                 feedback["new_csatcase"] = new EntityReference("incident", caseGuid);
+                feedback["new_wasthetimetakentoprocesstheticketappropri"] = (model.TimeAppropriate == 1);
 
                 var feedbackId = service.Create(feedback);
 

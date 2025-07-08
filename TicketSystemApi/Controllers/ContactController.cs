@@ -84,12 +84,12 @@ namespace TicketSystemApi.Controllers
                 {
                     ColumnSet = new ColumnSet("contactid"),
                     Criteria =
-            {
-                Conditions =
-                {
-                    new ConditionExpression("mobilephone", ConditionOperator.Equal, model.PhoneNumber)
-                }
-            }
+                    {
+                        Conditions =
+                        {
+                            new ConditionExpression("mobilephone", ConditionOperator.Equal, model.PhoneNumber)
+                        }
+                    }
                 };
 
                 var contactResult = service.RetrieveMultiple(contactQuery);
